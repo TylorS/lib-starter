@@ -12,7 +12,7 @@ git init
 
 git remote add origin git@github.com:USERNAME/REPO_NAME
 
-node .scripts/add-devDependencies.sh
+node .scripts/addDevDependencies.sh
 ```
 
 - Edit the first 3 fields in the package.json
