@@ -5,6 +5,7 @@ const cwd = join(__dirname, '..')
 
 const packages =
   [
+    '@briancavalier/assert',
     '@motorcycle/tslint',
     '@types/mocha',
     '@types/node',
