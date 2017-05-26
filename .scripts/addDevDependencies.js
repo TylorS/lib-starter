@@ -14,6 +14,7 @@ const packages =
     'glob-expand',
     'husky',
     'mocha',
+    'rimraf',
     'ts-node',
     'tslint',
     'typescript',
