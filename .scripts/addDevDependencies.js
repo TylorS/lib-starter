@@ -20,4 +20,4 @@ const packages =
     'validate-commit-message',
   ]
 
-execSync('yarn add --dev' + packages.join(' '), { cwd, stdio: 'inherit' })
+execSync('yarn add --dev ' + packages.join(' '), { cwd, stdio: 'inherit' })
