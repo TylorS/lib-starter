@@ -17,16 +17,16 @@ export function displayResult<A>(test: Test<A>): Promise<string> {
       mapP<Array<string>, ReadonlyArray<string>>(map(padNewLines(2)),
         all<Array<string>>(...tests.map(displayResult)))
 
-    return mapP((strs) => `${blue(name)}` + `\n  ` + join('\n  ', strs), results)
+    return mapP((strs) => `${blue(name)}` + `\n  ` + join('\n\n  ', strs), results)
   }
 
-  const { '@@typed/test': name, run } = test as SingularTest<A>
+  const { '@@typed/test': name, run } = test as SingularTest
 
-  return chain(resultToString<A>(name), run())
+  return chain(resultToString(name), run())
 }
 
-function resultToString<A>(testType: string) {
-  return function(result: Result<A>): Promise<string> {
+function resultToString(testType: string) {
+  return function(result: Result): Promise<string> {
     const { name, passed, error } = result
 
     if (passed) return resolved(good(testType, name))

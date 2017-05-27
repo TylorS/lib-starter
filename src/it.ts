@@ -5,12 +5,12 @@ import { bimap, create, rejected, resolved } from '@typed/promises'
 export const it: It = curry2(_it)
 
 export interface It {
-  <A>(does: string, test: (done: Done) => A | Promise<A>): SingularTest<A>
-  <A>(does: string): (test: (done: Done) => A | Promise<A>) => SingularTest<A>
+  <A>(does: string, test: (done: Done) => A | Promise<A>): SingularTest
+  <A>(does: string): (test: (done: Done) => A | Promise<A>) => SingularTest
 }
 
-function _it<A>(name: string, test: Arity1<Done, A | Promise<A>>): SingularTest<A> {
-  const run = () => create<Result<A>>(({ resolve }) => {
+function _it<A>(name: string, test: Arity1<Done, A | Promise<A>>): SingularTest {
+  const run = () => create<Result>(({ resolve }) => {
     const done: Done = (error?: Error) => !!error ?
       resolve({ name, passed: false, error: just(error) }) :
       resolve({ name, passed: true, error: nothing() })
