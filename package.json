@@ -11,7 +11,8 @@
   "author": "Tylor Steinberger <tlsteinberger167@gmail.com>",
   "license": "MIT",
   "devDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+  },
   "scripts": {
     "build": "yarn build:commonjs && yarn build:es2015",
     "build:commonjs": "tsc -P .config/tsconfig.commonjs.json",
@@ -27,6 +28,6 @@
     "release:minor": "npm version minor -m 'chore(package): v%s'",
     "test": "yarn test:lint && yarn test:unit",
     "test:lint": "tslint --project tsconfig.json --type-check",
-    "test:unit": "mocha -r ts-node/register 'src/**/*.test.ts'"
+    "test:unit": "./node_modules/.bin/test -r ts-node/register 'src/**/*.test.ts'"
   }
 }
