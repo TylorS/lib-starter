@@ -7,5 +7,5 @@ First of all, thank you so much, we need your help.
 1. Fork the repository
 2. Switch to a new branch `git checkout -b [branchName]`
 3. Produce your fix or feature
-4. Use `yarn commit` instead of `git commit` PLEASE!
+4. Use Angular-style git commit messages, PLEASE!
 5. Submit a pull request for review

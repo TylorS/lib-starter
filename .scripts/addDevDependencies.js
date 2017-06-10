@@ -5,20 +5,19 @@ const cwd = join(__dirname, '..')
 
 const packages =
   [
-    '@briancavalier/assert',
-    '@motorcycle/tslint',
     '@typed/test',
     '@types/node',
-    'commitizen',
     'conventional-changelog-cli',
-    'cz-conventional-changelog',
+    'dox',
+    'gaze-run-interrupt',
     'glob-expand',
     'husky',
+    'lint-staged',
+    'marked',
+    'prettier',
     'rimraf',
-    'ts-node',
-    'tslint',
     'typescript',
     'validate-commit-message',
   ]
 
-execSync('yarn add --dev ' + packages.join(' '), { cwd, stdio: 'inherit' })
+execSync('npm install --save-dev ' + packages.join(' '), { cwd, stdio: 'inherit' })
