@@ -16,6 +16,7 @@ const packages =
     'marked',
     'prettier',
     'rimraf',
+    'ts-node',
     'typescript',
     'validate-commit-message',
   ]
