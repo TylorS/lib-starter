@@ -1,6 +1,6 @@
-import { TestCollection, describe, given, it } from '@typed/test'
+import { Test, describe, given, it } from '@typed/test'
 
-export const test: TestCollection = describe(`Foo`, [
+export const test: Test = describe(`Foo`, [
   given(`Bar`, [
     it(`Baz`, ({ ok }) => { ok(true) })
   ])

@@ -21,4 +21,4 @@ const packages =
     'validate-commit-message',
   ]
 
-execSync('npm install --save-dev ' + packages.join(' '), { cwd, stdio: 'inherit' })
+execSync('yarn add --dev --exact ' + packages.join(' '), { cwd, stdio: 'inherit' })
