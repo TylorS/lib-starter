@@ -7,18 +7,13 @@ const packages =
   [
     '@typed/test',
     '@types/node',
-    'conventional-changelog-cli',
+    '167',
     'dox',
-    'gaze-run-interrupt',
     'glob-expand',
     'husky',
     'lint-staged',
-    'marked',
     'prettier',
-    'rimraf',
-    'ts-node',
-    'typescript',
-    'validate-commit-message',
+    'typescript'
   ]
 
 execSync('yarn add --dev --exact ' + packages.join(' '), { cwd, stdio: 'inherit' })
